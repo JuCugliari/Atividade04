@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Atividade Aula 4</title>
+</head>
+<body>
+    <script>
+        function somar() {
+            let numero1 = document.querySelector('.valor1').value;
+            let numero2 = document.querySelector('.valor2').value;
+            let resultado = document.querySelector('#resultado');
+            let titulo = document.querySelector('.title');
+            let subtitulo = document.getElementsByName('subtitle');
+            resultado.innerText = parseInt(numero1) + parseInt(numero2);
+            
+            resultado.style.color = 'green';
+            resultado.style.fontSize = '25px';
+
+            titulo.style.color = 'black';
+
+            subtitulo[0].innerText = 'É isso charles ' + numero1 + ' e ' + numero2 + ' é ' + resultado.innerText;
+        }
+    </script>
+
+<div class="container">
+    <h1 class="title">Olá, Mundo</h1>
+    <h2 name="subtitle"></h2>
+    <div class="calculadora">
+        <input class="valor1" type="number">
+        <input class="valor2" type="number">
+        <button onclick="somar()">Somar</button>
+        <p id="resultado" ></p>
+
+    </div>
+    </div>
+
+</body>
+</html>
